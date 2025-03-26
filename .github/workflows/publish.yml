@@ -16,10 +16,11 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build the Docker image
-      run: |
-        docker build -t ghcr.io/wattlefoxxo/muse:latest .
-
-    - name: Push the Docker image
-      run: |
-        docker push ghcr.io/wattlefoxxo/muse:latest
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: ./Dockerfile
+        platforms: linux/amd64,linux/arm64
+        tags: ghcr.io/wattlefoxxo/muse:latest
+        push: true
