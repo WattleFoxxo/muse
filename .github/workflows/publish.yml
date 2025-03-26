@@ -1,9 +1,6 @@
 name: Make release & publish Docker image
 
-on:
-  push:
-    tags:
-    - 'v*'
+on: [push, pull_request]
 
 env:
   REGISTRY_IMAGE: ghcr.io/WattleFoxxo/muse
