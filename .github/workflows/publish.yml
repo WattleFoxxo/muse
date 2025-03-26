@@ -18,8 +18,8 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build -t ghcr.io/${{ github.actor }}/${{ github.repository }}:latest .
+        docker build -t ghcr.io/wattlefoxxo/muse:latest .
 
     - name: Push the Docker image
       run: |
-        docker push ghcr.io/${{ github.actor }}/${{ github.repository }}:latest
+        docker push ghcr.io/wattlefoxxo/muse:latest
