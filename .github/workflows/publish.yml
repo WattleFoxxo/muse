@@ -3,7 +3,7 @@ name: Make release & publish Docker image
 on: [push, pull_request]
 
 env:
-  REGISTRY_IMAGE: ghcr.io/WattleFoxxo/muse
+  REGISTRY_IMAGE: ghcr.io/wattlefoxxo/muse
 
 jobs:
   publish:
